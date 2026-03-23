@@ -55,7 +55,7 @@ export default function Home() {
 
       <div className={`transition-opacity duration-500 ${showSplash ? 'opacity-0' : 'opacity-100'}`}>
         <AnimatedBackground />
-        <Navigation isDark={isDark} toggleTheme={toggleTheme} />
+        <Navigation isDarkMode={isDark} toggleTheme={toggleTheme} />
 
         <main>
           <Hero />
