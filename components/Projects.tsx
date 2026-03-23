@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { projects } from '@/data/resume'
 
@@ -83,16 +84,15 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <motion.button
-                    whileHover={{ scale: 1.05, x: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="mt-6 flex items-center gap-2 text-primary-600 text-sm font-medium hover:text-primary-700 transition-colors"
+                  <Link
+                    href={project.link}
+                    className="mt-6 inline-flex items-center gap-2 text-primary-600 text-sm font-medium hover:text-primary-700 hover:translate-x-1 transition-all"
                   >
                     View Case Study
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </motion.button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

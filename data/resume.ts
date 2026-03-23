@@ -13,7 +13,7 @@ export const personalInfo = {
 }
 
 export const topImpacts = [
-  { metric: "$4.5M", label: "Client Savings" },
+  { metric: "CMU Tepper", label: "MBA 2027" },
   { metric: "1,200+", label: "Platform Users" },
   { metric: "4+ yrs", label: "Product Experience" },
 ]
