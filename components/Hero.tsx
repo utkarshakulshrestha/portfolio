@@ -29,10 +29,10 @@ export default function Hero() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 2.3 + index * 0.1, duration: 0.4 }}
-                className="glass px-4 py-2 rounded-full flex items-center gap-2"
+                className="bg-gray-50 border border-gray-200 px-4 py-2 rounded-full flex items-center gap-2"
               >
-                <span className="text-lg md:text-xl font-bold gradient-text">{impact.metric}</span>
-                <span className="text-sm text-gray-400">{impact.label}</span>
+                <span className="text-lg md:text-xl font-bold text-primary-600">{impact.metric}</span>
+                <span className="text-sm text-gray-500">{impact.label}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -41,10 +41,10 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 2.3, duration: 0.6 }}
+            transition={{ delay: 2.4, duration: 0.6 }}
             className="mb-8 flex justify-center"
           >
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-primary-500/30 shadow-lg shadow-primary-500/20">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-gray-100 shadow-md">
               <Image
                 src="/images/about/img1.png"
                 alt={personalInfo.name}
@@ -59,11 +59,11 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.4, duration: 0.6 }}
+            transition={{ delay: 2.5, duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4">
-              <span className="text-white">Hi, I'm </span>
-              <span className="gradient-text text-shadow-glow">{personalInfo.name.split(' ')[0]}</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
+              <span className="text-gray-900">Hi, I'm </span>
+              <span className="text-primary-600">{personalInfo.name.split(' ')[0]}</span>
             </h1>
           </motion.div>
 
@@ -74,9 +74,9 @@ export default function Hero() {
             transition={{ delay: 2.6, duration: 0.5 }}
             className="mb-6"
           >
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 font-display">
-              {personalInfo.title} <span className="text-primary-400">•</span>{' '}
-              <span className="gradient-text">{personalInfo.tagline}</span>
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-600">
+              {personalInfo.title} <span className="text-primary-400">·</span>{' '}
+              <span className="text-primary-600">{personalInfo.tagline}</span>
             </p>
           </motion.div>
 
@@ -84,8 +84,8 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.8, duration: 0.5 }}
-            className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed"
+            transition={{ delay: 2.7, duration: 0.5 }}
+            className="text-base md:text-lg text-gray-500 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             {personalInfo.summary}
           </motion.p>
@@ -94,11 +94,11 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 3, duration: 0.4 }}
+            transition={{ delay: 2.8, duration: 0.4 }}
             className="inline-block mb-10"
           >
-            <span className="glass px-6 py-3 rounded-full text-sm md:text-base font-medium">
-              <span className="text-green-400 mr-2">●</span>
+            <span className="bg-primary-50 border border-primary-200 px-6 py-3 rounded-full text-sm md:text-base font-medium text-gray-700">
+              <span className="text-green-500 mr-2">●</span>
               {personalInfo.seeking}
             </span>
           </motion.div>
@@ -107,18 +107,14 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3.2, duration: 0.5 }}
+            transition={{ delay: 2.9, duration: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {/* Primary CTA */}
             <motion.button
               onClick={() => scrollToSection('experience')}
-              whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(102, 126, 234, 0.5)' }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300"
-              style={{
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              }}
+              className="px-8 py-4 rounded-xl font-semibold text-white bg-primary-600 hover:bg-primary-700 transition-colors shadow-md"
             >
               <span className="flex items-center justify-center gap-2">
                 View Experience
@@ -128,15 +124,14 @@ export default function Hero() {
               </span>
             </motion.button>
 
-            {/* Secondary CTA */}
             <motion.a
               href="/resume.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-xl font-semibold glass gradient-border hover:bg-white/5 transition-all duration-300"
+              className="px-8 py-4 rounded-xl font-semibold border-2 border-gray-300 text-gray-700 hover:border-primary-600 hover:bg-primary-50 transition-all"
             >
-              <span className="flex items-center justify-center gap-2 text-white">
+              <span className="flex items-center justify-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -154,7 +149,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3.4, duration: 0.5 }}
+            transition={{ delay: 3.0, duration: 0.5 }}
             className="mt-8 pb-4 flex justify-center gap-4"
           >
             {[
@@ -162,7 +157,7 @@ export default function Hero() {
               { url: personalInfo.github, icon: 'github' },
               { url: personalInfo.twitter, icon: 'twitter' },
               { url: `mailto:${personalInfo.email}`, icon: 'email' },
-            ].map((social, index) => (
+            ].map((social) => (
               <motion.a
                 key={social.icon}
                 href={social.url}
@@ -170,7 +165,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-12 h-12 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-white hover:glow-effect-sm transition-all duration-300"
+                className="w-12 h-12 rounded-xl bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:bg-primary-50 hover:border-primary-300 transition-all duration-300"
               >
                 <SocialIcon icon={social.icon} />
               </motion.a>
@@ -183,13 +178,13 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3.6, duration: 0.5 }}
+        transition={{ delay: 3.2, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-6 h-10 rounded-full border-2 border-gray-600 flex items-start justify-center p-2"
+          className="w-6 h-10 rounded-full border-2 border-gray-300 flex items-start justify-center p-2"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}

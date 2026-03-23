@@ -5,7 +5,7 @@ import { personalInfo } from '@/data/resume'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-32">
+    <section id="contact" className="py-20 md:py-32 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,92 +14,74 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
-          {/* Section Header */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
-            <span className="gradient-text">Let's Connect</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+            Let's Connect
           </h2>
 
-          <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg mb-12 max-w-2xl mx-auto">
             I'm looking for PM internships at AI-first startups (Summer 2026). If you're building
             the future of AI productivity tools and want someone who ships fast and obsesses over
             users—let's talk.
           </p>
 
           {/* Contact Card */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="glass rounded-3xl p-8 md:p-12 relative overflow-hidden"
-          >
-            {/* Background glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-accent-500/10" />
+          <div className="bg-white border border-gray-200 rounded-3xl p-8 md:p-12 shadow-sm">
+            {/* Email */}
+            <motion.a
+              href={`mailto:${personalInfo.email}`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 shadow-md mb-8 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              {personalInfo.email}
+            </motion.a>
 
-            <div className="relative">
-              {/* Email */}
-              <motion.a
-                href={`mailto:${personalInfo.email}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg font-semibold text-white mb-8 transition-all duration-300"
-                style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  boxShadow: '0 0 30px rgba(102, 126, 234, 0.4)',
-                }}
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                {personalInfo.email}
-              </motion.a>
-
-              {/* Social Links */}
-              <div className="flex justify-center gap-4 mb-8">
-                {[
-                  { url: personalInfo.linkedin, icon: 'linkedin', label: 'LinkedIn' },
-                  { url: personalInfo.github, icon: 'github', label: 'GitHub' },
-                  { url: personalInfo.twitter, icon: 'twitter', label: 'Twitter' },
-                ].map((social) => (
-                  <motion.a
-                    key={social.icon}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -5 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-14 h-14 rounded-2xl glass flex items-center justify-center text-gray-400 hover:text-white hover:glow-effect-sm transition-all duration-300"
-                    aria-label={social.label}
-                  >
-                    <SocialIcon icon={social.icon} />
-                  </motion.a>
-                ))}
-              </div>
-
-              {/* Phone */}
-              <p className="text-gray-400">
-                <span className="text-primary-400">📱</span> {personalInfo.phone}
-              </p>
+            {/* Social Links */}
+            <div className="flex justify-center gap-4 mb-8">
+              {[
+                { url: personalInfo.linkedin, icon: 'linkedin', label: 'LinkedIn' },
+                { url: personalInfo.github, icon: 'github', label: 'GitHub' },
+                { url: personalInfo.twitter, icon: 'twitter', label: 'Twitter' },
+              ].map((social) => (
+                <motion.a
+                  key={social.icon}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:bg-primary-50 hover:border-primary-300 transition-all duration-300"
+                  aria-label={social.label}
+                >
+                  <SocialIcon icon={social.icon} />
+                </motion.a>
+              ))}
             </div>
-          </motion.div>
+
+            {/* Phone */}
+            <p className="text-gray-500">
+              {personalInfo.phone}
+            </p>
+          </div>
         </motion.div>
       </div>
 
       {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mt-20 pt-8 border-t border-white/10"
-      >
+      <footer className="mt-20 pt-8 border-t border-gray-200">
         <div className="container mx-auto px-4 md:px-8 text-center">
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} {personalInfo.name}. Built with Next.js & Framer Motion.
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} {personalInfo.name}. Built with Next.js.
           </p>
         </div>
-      </motion.footer>
+      </footer>
     </section>
   )
 }

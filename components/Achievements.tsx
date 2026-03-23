@@ -2,13 +2,12 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { achievements, topImpacts } from '@/data/resume'
+import { achievements } from '@/data/resume'
 
 export default function Achievements() {
   return (
     <section id="achievements" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-8">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,15 +15,15 @@ export default function Achievements() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">Achievements</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+            Achievements
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Recognition for product leadership and measurable impact
           </p>
         </motion.div>
 
-        {/* Animated Counters - Top Impact Strip */}
+        {/* Animated Counters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,55 +44,35 @@ export default function Achievements() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{
-                y: -10,
-                boxShadow: '0 0 60px rgba(102, 126, 234, 0.3)',
-              }}
-              className="glass rounded-2xl p-6 relative overflow-hidden group tilt-card"
+              whileHover={{ y: -5 }}
+              className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300"
             >
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/10 group-hover:to-accent-500/10 transition-all duration-500" />
-
-              {/* Trophy icon */}
-              <div className="relative mb-4">
-                <motion.div
-                  whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%)',
-                  }}
-                >
+              {/* Icon */}
+              <div className="mb-4">
+                <div className="w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center">
                   <AchievementIcon type={achievement.icon} />
-                </motion.div>
-              </div>
-
-              {/* Content */}
-              <div className="relative">
-                <h3 className="text-lg font-display font-bold text-white mb-2 group-hover:gradient-text transition-all duration-300">
-                  {achievement.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {achievement.description}
-                </p>
-
-                {/* Type badge */}
-                <div className="mt-4">
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      achievement.type === 'award'
-                        ? 'bg-yellow-500/20 text-yellow-400'
-                        : 'bg-green-500/20 text-green-400'
-                    }`}
-                  >
-                    {achievement.type === 'award' ? '🏆 Award' : '📊 Metric'}
-                  </span>
                 </div>
               </div>
 
-              {/* Spotlight effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-primary-500/20 rounded-full blur-3xl" />
+              {/* Content */}
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
+                {achievement.title}
+              </h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                {achievement.description}
+              </p>
+
+              {/* Type badge */}
+              <div className="mt-4">
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    achievement.type === 'award'
+                      ? 'bg-yellow-50 text-yellow-700 border border-yellow-200'
+                      : 'bg-green-50 text-green-700 border border-green-200'
+                  }`}
+                >
+                  {achievement.type === 'award' ? 'Award' : 'Metric'}
+                </span>
               </div>
             </motion.div>
           ))}
@@ -111,7 +90,6 @@ function CounterCard({ value, label }: { value: string; label: string }) {
   useEffect(() => {
     if (!isInView) return
 
-    // Extract number from value
     const numericMatch = value.match(/[\d,]+/)
     if (!numericMatch) {
       setDisplayValue(value)
@@ -122,7 +100,6 @@ function CounterCard({ value, label }: { value: string; label: string }) {
     const prefix = value.substring(0, value.indexOf(numericMatch[0]))
     const suffix = value.substring(value.indexOf(numericMatch[0]) + numericMatch[0].length)
 
-    // Animate counter
     const duration = 2000
     const steps = 60
     const increment = numericValue / steps
@@ -144,23 +121,23 @@ function CounterCard({ value, label }: { value: string; label: string }) {
     <motion.div
       ref={ref}
       whileHover={{ scale: 1.05 }}
-      className="glass rounded-2xl p-6 text-center"
+      className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm"
     >
       <motion.div
         initial={{ scale: 0.5, opacity: 0 }}
         animate={isInView ? { scale: 1, opacity: 1 } : {}}
         transition={{ duration: 0.5, type: 'spring' }}
-        className="text-3xl md:text-4xl font-display font-bold gradient-text mb-2"
+        className="text-3xl md:text-4xl font-bold text-primary-600 mb-2"
       >
         {displayValue}
       </motion.div>
-      <p className="text-gray-400 text-sm">{label}</p>
+      <p className="text-gray-500 text-sm">{label}</p>
     </motion.div>
   )
 }
 
 function AchievementIcon({ type }: { type: string }) {
-  const iconClass = 'w-8 h-8 text-primary-400'
+  const iconClass = 'w-8 h-8 text-primary-600'
 
   switch (type) {
     case 'trophy':
