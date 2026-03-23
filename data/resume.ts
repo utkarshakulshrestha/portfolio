@@ -20,13 +20,15 @@ export const topImpacts = [
 
 export const skills = [
   "Product Requirements & Success Metrics",
-  "User Research & A/B Testing",
-  "Sprint Management & Roadmapping",
+  "User Feedback Analysis & Retention",
+  "Sprint Management & Documentation",
   "AI/ML (LLMs, RAG, Fine-Tuning)",
-  "Figma, JIRA, Tableau, Amplitude",
+  "Market & Competitor Research",
+  "Cross-Platform UX (iOS, Web, Desktop)",
+  "Figma, Notion, Amplitude, JIRA",
   "Python, SQL, REST APIs",
-  "Agile/Scrum & User Retention",
-  "Cross-functional Leadership",
+  "Fast-Paced Startup Execution",
+  "Cross-functional Collaboration",
 ]
 
 export const experience = [

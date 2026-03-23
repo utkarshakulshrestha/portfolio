@@ -1,7 +1,8 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { skills, education } from '@/data/resume'
+import { personalInfo, skills, education } from '@/data/resume'
 
 export default function About() {
   return (
@@ -20,6 +21,67 @@ export default function About() {
           </h2>
         </motion.div>
 
+        {/* Image + Bio row */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10 items-center mb-16">
+          {/* Profile Image - takes 2 columns */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2 flex justify-center"
+          >
+            <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden ring-2 ring-white/10 shadow-xl shadow-primary-500/10">
+              <Image
+                src="/images/about/img2.jpg"
+                alt="About Utkarsha"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent" />
+            </div>
+          </motion.div>
+
+          {/* Bio text - takes 3 columns */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-3 space-y-6"
+          >
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              {personalInfo.summary}
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass px-5 py-2.5 rounded-xl text-sm font-medium text-primary-400 hover:text-white hover:bg-primary-500/20 transition-all"
+              >
+                LinkedIn →
+              </a>
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="glass px-5 py-2.5 rounded-xl text-sm font-medium text-primary-400 hover:text-white hover:bg-primary-500/20 transition-all"
+              >
+                {personalInfo.email}
+              </a>
+            </div>
+
+            {/* Seeking badge */}
+            <div className="inline-block">
+              <span className="glass px-5 py-2.5 rounded-full text-sm font-medium">
+                <span className="text-green-400 mr-2">●</span>
+                {personalInfo.seeking}
+              </span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Skills + Education row */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Skills */}
           <motion.div

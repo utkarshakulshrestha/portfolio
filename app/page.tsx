@@ -59,10 +59,10 @@ export default function Home() {
 
         <main>
           <Hero />
+          <About />
+          <Projects />
           <Experience />
           <Achievements />
-          <Projects />
-          <About />
           <Contact />
         </main>
       </div>

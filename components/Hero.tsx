@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { personalInfo, topImpacts } from '@/data/resume'
 
@@ -13,7 +14,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative pt-20">
-      <div className="container mx-auto px-4 md:px-8 py-12">
+      <div className="container mx-auto px-4 md:px-8 py-12 pb-20">
         <div className="max-w-5xl mx-auto text-center">
           {/* Top Impact Strip */}
           <motion.div
@@ -34,6 +35,24 @@ export default function Hero() {
                 <span className="text-sm text-gray-400">{impact.label}</span>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 2.3, duration: 0.6 }}
+            className="mb-8 flex justify-center"
+          >
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden ring-4 ring-primary-500/30 shadow-lg shadow-primary-500/20">
+              <Image
+                src="/images/about/img1.png"
+                alt={personalInfo.name}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </motion.div>
 
           {/* Main Heading */}
@@ -136,7 +155,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 3.4, duration: 0.5 }}
-            className="mt-12 flex justify-center gap-4"
+            className="mt-8 pb-4 flex justify-center gap-4"
           >
             {[
               { url: personalInfo.linkedin, icon: 'linkedin' },
