@@ -1,34 +1,32 @@
 export const personalInfo = {
   name: "Utkarsha Kulshrestha",
   initials: "UK",
-  title: "Product Manager",
-  tagline: "I build AI products from 0→1",
+  title: "MBA Candidate @ CMU Tepper",
+  tagline: "4 years of shipping AI products at EY",
   email: "ukulshre@tepper.cmu.edu",
   phone: "412.579.1892",
   linkedin: "https://www.linkedin.com/in/utkarshak/",
   github: "https://github.com/utkarshakulshrestha",
   twitter: "https://x.com/utkarshakulshr1",
-  summary: "4+ years as Product Lead at EY, driving AI-powered platform strategy. Defined product requirements and success metrics for 1,200+ users, delivering ~$1.8M in annual savings. Led 15-member squad shipping 872 features and 9,000+ workflows. MBA @ CMU Tepper.",
+  summary: "Seeking PM internships at AI-first startups. 4+ years of product experience at EY — owned roadmaps, ran user research, and led a 15-member squad building an automation platform for 1,200+ users. Now pursuing my MBA at CMU Tepper, focused on AI and product strategy.",
   seeking: "PM internships (Summer 2026)",
 }
 
 export const topImpacts = [
   { metric: "$4.5M", label: "Client Savings" },
-  { metric: "872", label: "Features Shipped" },
-  { metric: "22%", label: "Cycle Time Reduction" },
+  { metric: "1,200+", label: "Platform Users" },
+  { metric: "4+ yrs", label: "Product Experience" },
 ]
 
 export const skills = [
   "Product Requirements & Success Metrics",
-  "User Feedback Analysis & Retention",
-  "Sprint Management & Documentation",
+  "User Research & A/B Testing",
+  "Sprint Management & Roadmapping",
   "AI/ML (LLMs, RAG, Fine-Tuning)",
   "Market & Competitor Research",
-  "Cross-Platform UX (iOS, Web, Desktop)",
   "Figma, Notion, Amplitude, JIRA",
   "Python, SQL, REST APIs",
-  "Fast-Paced Startup Execution",
-  "Cross-functional Collaboration",
+  "Cross-functional Team Leadership",
 ]
 
 export const experience = [
@@ -37,110 +35,66 @@ export const experience = [
     title: "Product Lead – AI Automation Platform",
     company: "EY GDS",
     location: "Gurugram, India",
-    duration: "Jul 2024 – Jul 2025",
+    duration: "May 2023 – Jul 2025",
     highlights: [
       {
-        text: "Defined product requirements and success metrics for AI-powered automation platform",
-        metrics: ["5 business units", "1,200+ users", "22% cycle time reduction", "$1.8M annual savings"],
+        text: "Defined product requirements and success metrics for an AI-powered automation platform serving 1,200+ users across 5 business units",
+        metrics: ["22% cycle time reduction", "$1.8M annual savings"],
       },
       {
-        text: "Analyzed user feedback through A/B tests and Tableau dashboards",
-        metrics: ["22% adoption boost", "$3.1M revenue growth"],
+        text: "Ran A/B tests and built Tableau dashboards to analyze user feedback, driving adoption and retention improvements",
+        metrics: ["22% adoption boost"],
       },
       {
-        text: "Conducted market and competitor research",
-        metrics: ["40% faster requirements", "30% less rework"],
+        text: "Owned quarterly roadmap and managed sprints for a 15-member cross-functional squad (design, engineering, business)",
+        metrics: ["35% more releases", "78% → 94% on-time delivery"],
       },
       {
-        text: "Managed product sprints, timelines, and documentation across cross-functional teams",
-        metrics: [],
+        text: "Conducted user research for Fortune 500 client, translating needs into product requirements that drove measurable savings",
+        metrics: ["$4.5M client savings", "78% adoption increase"],
       },
     ],
-    impactHighlights: ["$1.8M Savings", "22% Faster", "$3.1M Revenue"],
+    impactHighlights: ["$4.5M Client Savings", "1,200+ Users", "15-Member Squad"],
   },
   {
     id: 2,
-    title: "Product Manager – Enterprise Automation Platform",
-    company: "EY GDS",
-    location: "Gurugram, India",
-    duration: "May 2023 – Jun 2024",
-    highlights: [
-      {
-        text: "Owned quarterly product roadmap and managed sprint ceremonies",
-        metrics: ["6,447 manual hours eliminated", "$1.2M annual savings", "35% more releases"],
-      },
-      {
-        text: "Led 15-member squad across design, engineering, and business teams",
-        metrics: ["872 features", "9,000+ workflows"],
-      },
-      {
-        text: "Researched user needs for Fortune 500 client",
-        metrics: ["$4.5M savings", "78% adoption increase"],
-      },
-    ],
-    impactHighlights: ["$4.5M Impact", "872 Features", "15-Member Squad"],
-  },
-  {
-    id: 3,
     title: "Associate Product Manager – Platform Foundations",
     company: "EY GDS",
     location: "Gurugram, India",
-    duration: "Feb 2022 – Apr 2023",
+    duration: "Jan 2021 – Apr 2023",
     highlights: [
       {
-        text: "Built reusable automation frameworks and delivered 3,000+ SAP automations",
-        metrics: ["72% effort reduction", "$2.1M annual savings"],
-      },
-      {
-        text: "Documented product updates through weekly sprint reviews",
-        metrics: ["35% less misalignment", "78% → 94% on-time delivery"],
-      },
-      {
-        text: "Introduced structured feedback loops to improve product flows",
+        text: "Built a reusable automation platform from scratch with 3,000+ SAP components, reducing manual effort by 72%",
         metrics: ["North American Software Awards recognition"],
       },
-    ],
-    impactHighlights: ["$2.1M Savings", "72% Efficiency", "Award Winner"],
-  },
-  {
-    id: 4,
-    title: "Product Engineer – Automation",
-    company: "EY GDS",
-    location: "Gurugram, India",
-    duration: "Jan 2021 – Jan 2022",
-    highlights: [
       {
-        text: "Built Java and Selenium-based test automation frameworks",
-        metrics: [],
+        text: "Introduced structured feedback loops and weekly sprint reviews to improve alignment across teams",
+        metrics: ["35% less misalignment"],
       },
       {
-        text: "Developed internal documentation and workflow tools",
-        metrics: ["40% efficiency improvement", "$1.6M in engagements"],
-      },
-      {
-        text: "Designed reporting modules that surfaced product trends early",
+        text: "Transitioned from engineering to product — started building test frameworks, then owned documentation, roadmap, and stakeholder communication",
         metrics: [],
       },
     ],
-    impactHighlights: ["$1.6M Deals", "40% Efficiency"],
+    impactHighlights: ["72% Effort Reduction", "Award-Winning Platform", "Eng → PM Transition"],
   },
   {
-    id: 5,
+    id: 3,
     title: "Business Development Associate – Product & Growth",
     company: "K21 Academy",
     location: "Jaipur, India",
     duration: "Jul 2020 – Dec 2020",
     highlights: [
       {
-        text: "Conducted user research and developed CRM insights",
-        metrics: ["$330K revenue", "6 months"],
+        text: "Conducted user research and developed CRM-driven insights to shape product and content strategy at an ed-tech startup",
+        metrics: ["$330K revenue in 6 months"],
       },
       {
-        text: "Managed end-to-end content and product workflows in startup environment",
+        text: "Managed end-to-end content and product workflows — first exposure to fast-paced, resource-constrained environment",
         metrics: [],
       },
     ],
-    impactHighlights: ["$330K Revenue", "Startup Experience"],
+    impactHighlights: ["$330K Revenue", "Ed-Tech Startup"],
   },
 ]
 
@@ -214,17 +168,17 @@ export const projects = [
   {
     id: 1,
     title: "PNC Prism",
-    subtitle: "AI-Powered PM Productivity Platform",
-    description: "Designed an AI-powered productivity solution for PNC's product managers, projecting 400% ROI and $12.2M annual benefits.",
-    metrics: ["400% ROI", "$12.2M Benefits", "200+ PMs"],
-    tags: ["AI/ML", "Product Strategy", "CMU Tepper"],
+    subtitle: "CMU Tepper · Academic Project for PNC",
+    description: "Designed an AI-powered productivity solution for PNC's product managers. Led user research with 15+ PMs, defined requirements, and built a business case projecting 400% ROI.",
+    metrics: ["400% Projected ROI", "15+ PM Interviews", "Full Business Case"],
+    tags: ["AI/ML", "Product Strategy", "User Research"],
     link: "/projects/pnc-prism",
   },
   {
     id: 2,
     title: "Gemini Chronos",
-    subtitle: "Google Hackathon Winner",
-    description: "Built AI-powered financial planning assistant using Google's Gemini API for personalized retirement planning.",
+    subtitle: "Google Hackathon · Winner",
+    description: "Built an AI-powered financial planning assistant using Google's Gemini API. Designed the product concept, user flows, and multi-agent RAG architecture over a 48-hour hackathon.",
     metrics: ["Hackathon Winner", "RAG Pipeline", "Multi-Agent"],
     tags: ["Google Gemini", "RAG", "Hackathon"],
     link: "/projects/gemini-chronos",
@@ -232,20 +186,11 @@ export const projects = [
   {
     id: 3,
     title: "EY Automation Platform",
-    subtitle: "Enterprise SAP Automation",
-    description: "Built zero-to-one automation platform with 3,000+ reusable SAP components, reducing manual effort 72%.",
-    metrics: ["72% Efficiency", "$2.1M Savings", "3,000+ Components"],
-    tags: ["SAP", "Automation", "Enterprise"],
+    subtitle: "EY GDS · Shipped Product",
+    description: "Owned the product roadmap for a reusable SAP automation platform from 0→1. Grew it to 3,000+ components used across Fortune 500 engagements. Won North American Software Awards.",
+    metrics: ["72% Effort Reduction", "3,000+ Components", "Award Winner"],
+    tags: ["Enterprise", "Automation", "SAP"],
     link: "/projects/ey-automation",
-  },
-  {
-    id: 4,
-    title: "GenAI Documentation System",
-    subtitle: "LLM + RAG Product",
-    description: "Led development of GenAI product that auto-generates UX designs from user stories.",
-    metrics: ["40% Faster Design", "30% Less Rework", "LLM + RAG"],
-    tags: ["GenAI", "LLM", "RAG"],
-    link: "/projects/genai-docs",
   },
 ]
 
