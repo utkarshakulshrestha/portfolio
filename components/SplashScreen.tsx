@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface SplashScreenProps {
@@ -77,24 +78,20 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               }}
             />
 
-            {/* Monogram container */}
+            {/* Profile image container */}
             <motion.div
-              className="relative w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center"
+              className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%)',
-                backdropFilter: 'blur(10px)',
                 border: '2px solid rgba(255, 255, 255, 0.1)',
               }}
             >
-              {/* Initials */}
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="text-4xl md:text-5xl font-display font-bold gradient-text"
-              >
-                UK
-              </motion.span>
+              <Image
+                src="/images/about/img1.png"
+                alt="Utkarsha Kulshrestha"
+                fill
+                className="object-cover"
+                priority
+              />
             </motion.div>
 
             {/* Rotating ring */}
