@@ -35,63 +35,103 @@ export const experience = [
     title: "Product Lead – AI Automation Platform",
     company: "EY GDS",
     location: "Gurugram, India",
-    duration: "May 2023 – Jul 2025",
+    duration: "Jul 2024 – Jul 2025",
     highlights: [
       {
-        text: "Defined product requirements and success metrics for an AI-powered automation platform serving 1,200+ users across 5 business units",
+        text: "Identified that internal PMs and SAP operations teams spent excessive time translating requirements into system artifacts; owned discovery to define an AI automation platform addressing this bottleneck",
+        metrics: [],
+      },
+      {
+        text: "Defined go-to-value positioning for SAP + AI workflows; prioritized high-frequency use cases over long-tail automations to drive early adoption across 5 business units and 1,200+ users",
         metrics: ["22% cycle time reduction", "$1.8M annual savings"],
       },
       {
-        text: "Ran A/B tests and built Tableau dashboards to analyze user feedback, driving adoption and retention improvements",
-        metrics: ["22% adoption boost"],
+        text: "Led GenAI (LLM + RAG) solution to auto-generate UX designs and system artifacts from user stories",
+        metrics: ["40% requirements time cut", "30% rework reduction", "$2.4M re-engineering costs avoided"],
       },
       {
-        text: "Owned quarterly roadmap and managed sprints for a 15-member cross-functional squad (design, engineering, business)",
-        metrics: ["35% more releases", "78% → 94% on-time delivery"],
+        text: "Synthesized PM, design, and QA feedback; led A/B tests to refine MVP scope",
+        metrics: ["22% adoption boost", "$3.1M revenue accelerated", "12% delivery cycle reduction"],
       },
       {
-        text: "Conducted user research for Fortune 500 client, translating needs into product requirements that drove measurable savings",
-        metrics: ["$4.5M client savings", "78% adoption increase"],
-      },
-    ],
-    impactHighlights: ["$4.5M Client Savings", "1,200+ Users", "15-Member Squad"],
-  },
-  {
-    id: 2,
-    title: "Associate Product Manager – Platform Foundations",
-    company: "EY GDS",
-    location: "Gurugram, India",
-    duration: "Jan 2021 – Apr 2023",
-    highlights: [
-      {
-        text: "Built a reusable automation platform from scratch with 3,000+ SAP components, reducing manual effort by 72%",
-        metrics: ["North American Software Awards recognition"],
-      },
-      {
-        text: "Introduced structured feedback loops and weekly sprint reviews to improve alignment across teams",
-        metrics: ["35% less misalignment"],
-      },
-      {
-        text: "Transitioned from engineering to product — started building test frameworks, then owned documentation, roadmap, and stakeholder communication",
+        text: "Defined success metrics (adoption, throughput, rework rate) and built Tableau dashboards; insights informed OKRs, roadmap tradeoffs, and leadership investment decisions",
         metrics: [],
       },
     ],
-    impactHighlights: ["72% Effort Reduction", "Award-Winning Platform", "Eng → PM Transition"],
+    impactHighlights: ["$2.4M Savings", "1,200+ Users", "GenAI (LLM + RAG)"],
+  },
+  {
+    id: 2,
+    title: "Product Manager – Enterprise Automation Platform",
+    company: "EY GDS",
+    location: "Gurugram, India",
+    duration: "May 2023 – Jun 2024",
+    highlights: [
+      {
+        text: "Owned quarterly roadmap sequencing for enterprise SAP automation platform; deliberately deprioritized low-impact features to eliminate 6,447 manual hours",
+        metrics: ["$1.2M annual labor savings", "35% release frequency increase"],
+      },
+      {
+        text: "Led a 15-member engineering, QA, and automation squad delivering 872 features and 9,000+ automated workflows",
+        metrics: ["Improved predictability and time-to-market"],
+      },
+      {
+        text: "Defined AI-driven automation strategy for a Fortune 500 Power & Utilities client",
+        metrics: ["$4.5M operational savings", "78% coverage expansion", "28% reliability improvement"],
+      },
+    ],
+    impactHighlights: ["$4.5M Client Savings", "15-Member Squad", "9,000+ Workflows"],
   },
   {
     id: 3,
+    title: "Associate Product Manager – Platform Foundations",
+    company: "EY GDS",
+    location: "Gurugram, India",
+    duration: "Feb 2022 – Apr 2023",
+    highlights: [
+      {
+        text: "Built reusable automation frameworks and delivered 3,000+ SAP automations, reducing manual effort 72%",
+        metrics: ["$2.1M annual testing cost savings", "North American Software Awards recognition"],
+      },
+      {
+        text: "Introduced structured stakeholder feedback and release-quality metrics for PMs and ops users",
+        metrics: ["Improved team velocity and satisfaction"],
+      },
+      {
+        text: "Drove cross-functional alignment across engineering, QA, and business stakeholders through weekly sprint reviews and quarterly roadmap syncs",
+        metrics: ["35% less requirement misalignment", "94% on-time delivery"],
+      },
+    ],
+    impactHighlights: ["72% Effort Reduction", "Award-Winning Platform", "3,000+ Automations"],
+  },
+  {
+    id: 4,
+    title: "Product Engineer – Automation",
+    company: "EY GDS",
+    location: "Gurugram, India",
+    duration: "Jan 2021 – Jan 2022",
+    highlights: [
+      {
+        text: "Built Java- and Selenium-based test automation frameworks and reporting modules, improving regression efficiency and coverage across teams",
+        metrics: [],
+      },
+      {
+        text: "Defined GTM approach and established test governance with cross-functional teams",
+        metrics: ["40% efficiency improvement", "$1.6M in enterprise engagements"],
+      },
+    ],
+    impactHighlights: ["$1.6M Engagements", "40% Efficiency Gain", "Eng → PM Foundation"],
+  },
+  {
+    id: 5,
     title: "Business Development Associate – Product & Growth",
     company: "K21 Academy",
     location: "Jaipur, India",
     duration: "Jul 2020 – Dec 2020",
     highlights: [
       {
-        text: "Conducted user research and developed CRM-driven insights to shape product and content strategy at an ed-tech startup",
+        text: "Conducted market research and developed CRM insights to identify target segments, surpassing KPIs in lead generation and deal closures",
         metrics: ["$330K revenue in 6 months"],
-      },
-      {
-        text: "Managed end-to-end content and product workflows — first exposure to fast-paced, resource-constrained environment",
-        metrics: [],
       },
     ],
     impactHighlights: ["$330K Revenue", "Ed-Tech Startup"],
