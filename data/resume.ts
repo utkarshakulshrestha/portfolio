@@ -33,6 +33,7 @@ export const experience = [
   {
     id: 1,
     title: "Product Lead – AI Automation Platform",
+    designation: "Senior Consultant",
     company: "EY GDS",
     location: "Gurugram, India",
     duration: "Jul 2024 – Jul 2025",
@@ -63,6 +64,7 @@ export const experience = [
   {
     id: 2,
     title: "Product Manager – Enterprise Automation Platform",
+    designation: "Consultant",
     company: "EY GDS",
     location: "Gurugram, India",
     duration: "May 2023 – Jun 2024",
@@ -85,6 +87,7 @@ export const experience = [
   {
     id: 3,
     title: "Associate Product Manager – Platform Foundations",
+    designation: "Associate Consultant - 2",
     company: "EY GDS",
     location: "Gurugram, India",
     duration: "Feb 2022 – Apr 2023",
@@ -107,6 +110,7 @@ export const experience = [
   {
     id: 4,
     title: "Product Engineer – Automation",
+    designation: "Associate Consultant - 1",
     company: "EY GDS",
     location: "Gurugram, India",
     duration: "Jan 2021 – Jan 2022",
@@ -213,6 +217,7 @@ export const projects = [
     metrics: ["400% Projected ROI", "15+ PM Interviews", "Full Business Case"],
     tags: ["AI/ML", "Product Strategy", "User Research"],
     link: "/projects/pnc-prism",
+    image: "/images/case-studies/pnc-.png",
   },
   {
     id: 2,
@@ -222,6 +227,7 @@ export const projects = [
     metrics: ["Hackathon Winner", "RAG Pipeline", "Multi-Agent"],
     tags: ["Google Gemini", "RAG", "Hackathon"],
     link: "/projects/gemini-chronos",
+    image: "/images/clients/gemini-chronos.png",
   },
   {
     id: 3,
@@ -231,14 +237,87 @@ export const projects = [
     metrics: ["72% Effort Reduction", "3,000+ Components", "Award Winner"],
     tags: ["Enterprise", "Automation", "SAP"],
     link: "/projects/ey-automation",
+    image: "/images/case-studies/ey.png",
   },
 ]
 
 export const certifications = [
-  "Microsoft Azure Fundamentals",
-  "AWS Cloud Practitioner",
-  "Google Cloud Digital Leader",
-  "Generative AI at SAP",
-  "Agile PM",
-  "ISTQB",
+  { title: "ISTQB", description: "International Software Testing Qualifications Board", image: "/images/certifications/istqb.png" },
+  { title: "Tricentis TOSCA", description: "Automation Specialist 1, Automation Specialist 2, Automation Specialist API", image: "/images/certifications/tosca.jpg" },
+  { title: "Uipath", description: "Uipath RPA Developer", image: "/images/certifications/uipath.png" },
+  { title: "Microsoft", description: "Microsoft Azure Fundamental", image: "/images/certifications/microsoft.png" },
+  { title: "AWS", description: "AWS Certified Cloud Practitioner", image: "/images/certifications/aws.png" },
+  { title: "Google", description: "Google Cloud Platform (GCP), Google Analytics", image: "/images/certifications/google.svg" },
+  { title: "openSap", description: "Generative AI at SAP, Business Technology Platform in a Nutshell", image: "/images/certifications/opensap.png" },
+  { title: "Problem Solving", description: "Agile PM 201, Business Fundamentals Corporate Strategy, Problem-solving and Decision-making Strategies", image: "/images/certifications/problem-solving.png" },
+  { title: "Data Science", description: "Data Integration Fundamentals, ML with Python", image: "/images/certifications/data-science.png" },
+]
+
+export const oldProjects = [
+  {
+    title: "SeleniumGPT",
+    description: "Developed automated testing interface integrating Selenium, LangChain and GPT4 for internal EY projects achieving near human-level accuracy, reducing team efforts by 30% in manual testing.",
+    tags: ["Python", "Selenium", "GPT"],
+    image: "/images/projects/selenium.png",
+    link: "https://github.com/utkarshakulshrestha/SeleniumTestGPT",
+  },
+  {
+    title: "Smart Motion",
+    description: "Built a wireless home automation system for motion detection, integrating Node-MCU and Arduino UNO over MQTT wireless protocol. Collected motion data and trained a K-Means classifier for anomaly detection in night-time periods.",
+    tags: ["IOT", "C++", "MQTT"],
+    image: "/images/projects/smart-motion.png",
+    link: "https://github.com/utkarshakulshrestha/Smart_Motion_MQTT",
+  },
+  {
+    title: "Logistic Regression on MNIST using Microsoft Azure SDK",
+    description: "Developed a digit classifier using a logistic regression model trained on the MNIST dataset, trained and deployed the package on the cloud using Azure ML Python SDK. Improved the classifier with data augmentation techniques by applying rotate, shift, and transform on images to improve by 6% over baseline.",
+    tags: ["Azure", "Python"],
+    image: "/images/projects/azure-logo.png",
+    link: "https://medium.com/@utkarshak583/logistic-regression-on-mnist-using-microsoft-azure-sdk-d1d8b349b3f",
+  },
+]
+
+export const leadership = [
+  {
+    title: "Microsoft Student Partner",
+    description: "Organized Microsoft events with Directors and Executives, led workshops, and trained 2000+ students.",
+    tags: ["Leadership", "Team Building", "Collaboration"],
+    image: "/images/leadership/microsoft.png",
+    link: "https://mvp.microsoft.com/studentambassadors",
+  },
+  {
+    title: "TCS Campus Ambassador",
+    description: "Organized multiple workshops & recruitment drives with TCS executives, including the Head and Regional Head.",
+    tags: ["Leadership", "Team Building", "Collaboration"],
+    image: "/images/leadership/tcs.svg",
+    link: "https://www.tcsion.com/jobs/INFINITY-LEARNING-PRIVATE-LIMITED/Campus-Ambassador-4934/",
+  },
+  {
+    title: "Dell Ambassador",
+    description: "Promoted technology and PC knowledge among college students. Collaborated with peers and Dell leaders to drive innovation, career development, and the integration of technology in personal and professional growth.",
+    tags: ["Leadership", "Organisation and Delegation"],
+    image: "/images/leadership/dell.png",
+    link: "https://jobs.dell.com/en/india-students",
+  },
+]
+
+export const volunteering = [
+  {
+    title: "All India Confederation of the Blind School",
+    description: "Volunteered at AICB Blind School in Gurgaon, contributing to community service initiatives.",
+    image: "/images/volunteering/aicb.jpg",
+    link: "https://www.aicb.org.in/chandanlalSchool.html",
+  },
+  {
+    title: "Charity & Services for Community Kitchen",
+    description: "Engaged in active volunteering at the 'Shreeyog Foundation', organizing feeding drives for underprivileged communities.",
+    image: "/images/volunteering/community-kitchen.jpg",
+    link: "https://www.facebook.com/shreeyogtrustofficial/",
+  },
+  {
+    title: "EY Purpose Initiative",
+    description: "Engaged in social services with EY GDS and purpose initiative.",
+    image: "/images/volunteering/ey-purpose.png",
+    link: "https://www.ey.com/en_gl/newsroom/2019/12/ey-ripples-program-aims-to-positively-impact-the-lives-of-1-billion-people-by-2030",
+  },
 ]

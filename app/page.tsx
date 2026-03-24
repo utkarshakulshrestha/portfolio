@@ -8,6 +8,10 @@ import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
 import Experience from '@/components/Experience'
+import OldProjects from '@/components/OldProjects'
+import Leadership from '@/components/Leadership'
+import Volunteering from '@/components/Volunteering'
+import Certifications from '@/components/Certifications'
 import Contact from '@/components/Contact'
 
 export default function Home() {
@@ -37,6 +41,10 @@ export default function Home() {
           <About />
           <Projects />
           <Experience />
+          <OldProjects />
+          <Leadership />
+          <Volunteering />
+          <Certifications />
           <Contact />
         </main>
       </div>

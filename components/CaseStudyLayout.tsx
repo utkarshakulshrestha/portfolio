@@ -8,6 +8,7 @@ interface CaseStudyLayoutProps {
   title: string
   subtitle: string
   heroImage?: string
+  logo?: string
   role: string
   team: string
   timeline: string
@@ -19,6 +20,7 @@ export default function CaseStudyLayout({
   title,
   subtitle,
   heroImage,
+  logo,
   role,
   team,
   timeline,
@@ -53,6 +55,11 @@ export default function CaseStudyLayout({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
+            {logo && (
+              <div className="mb-8 flex justify-start">
+                <Image src={logo} alt={`${title} logo`} width={300} height={200} className="w-auto max-h-32 md:max-h-40 object-contain" />
+              </div>
+            )}
             <p className="text-primary-600 text-sm font-medium mb-3">{subtitle}</p>
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">{title}</h1>
 
@@ -77,9 +84,9 @@ export default function CaseStudyLayout({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden border border-gray-200"
+              className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden border border-gray-200 bg-white"
             >
-              <Image src={heroImage} alt={title} fill className="object-cover" priority />
+              <Image src={heroImage} alt={title} fill className="object-contain p-8" priority />
             </motion.div>
           )}
         </div>

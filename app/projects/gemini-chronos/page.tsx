@@ -11,6 +11,7 @@ export default function GeminiChronos() {
       title="Gemini Chronos: Designing an Agentic Commerce Platform for Google"
       subtitle="Google · USC 2026 Global Case Competition"
       heroImage="/images/case-studies/chronos-hero.png"
+      logo="/images/clients/gemini-chronos.png"
       role="Product Strategy & Design"
       team="4-member team"
       timeline="March 2026"

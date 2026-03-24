@@ -10,7 +10,8 @@ export default function EYAutomation() {
     <CaseStudyLayout
       title="Building a 0→1 Product That Won an Industry Award"
       subtitle="EY GDS · Shipped Product"
-      heroImage="/images/case-studies/automation-platform.png"
+      heroImage="/images/case-studies/ey.png"
+      logo="/images/case-studies/ey.png"
       role="Associate PM → Product Lead"
       team="20-person cross-functional team"
       timeline="Jan 2021 – Apr 2023"

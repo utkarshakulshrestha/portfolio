@@ -6,7 +6,7 @@ import { personalInfo, skills, education } from '@/data/resume'
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-32 bg-gray-50">
+    <section id="about" className="py-20 md:py-32 bg-gray-50/50">
       <div className="container mx-auto px-4 md:px-8">
         {/* Section Header */}
         <motion.div
@@ -16,7 +16,8 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+          <p className="text-primary-600 text-sm font-mono mb-3 tracking-wider uppercase">Background</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">
             About Me
           </h2>
         </motion.div>

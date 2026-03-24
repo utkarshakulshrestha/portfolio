@@ -5,80 +5,74 @@ import { personalInfo } from '@/data/resume'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gray-50">
+    <section id="contact" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-            Let's Connect
+          <p className="text-primary-600 text-sm font-mono mb-4 tracking-wider uppercase">Get in Touch</p>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-gray-900 tracking-tight">
+            Let's Build Something Together
           </h2>
 
-          <p className="text-gray-500 text-lg mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
             I'm looking for PM internships at AI-first startups (Summer 2026). If you're building
-            the future of AI productivity tools and want someone who ships fast and obsesses over
-            users—let's talk.
+            the future of AI and want someone who ships fast — let's talk.
           </p>
 
-          {/* Contact Card */}
-          <div className="bg-white border border-gray-200 rounded-3xl p-8 md:p-12 shadow-sm">
-            {/* Email */}
-            <motion.a
-              href={`mailto:${personalInfo.email}`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg font-semibold text-white bg-primary-600 hover:bg-primary-700 shadow-md mb-8 transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              {personalInfo.email}
-            </motion.a>
+          {/* CTA */}
+          <motion.a
+            href={`mailto:${personalInfo.email}`}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-base font-semibold text-white bg-gray-900 hover:bg-gray-800 shadow-lg shadow-gray-900/20 mb-10 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+            {personalInfo.email}
+          </motion.a>
 
-            {/* Social Links */}
-            <div className="flex justify-center gap-4 mb-8">
-              {[
-                { url: personalInfo.linkedin, icon: 'linkedin', label: 'LinkedIn' },
-                { url: personalInfo.github, icon: 'github', label: 'GitHub' },
-                { url: personalInfo.twitter, icon: 'twitter', label: 'Twitter' },
-              ].map((social) => (
-                <motion.a
-                  key={social.icon}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1, y: -5 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary-600 hover:bg-primary-50 hover:border-primary-300 transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <SocialIcon icon={social.icon} />
-                </motion.a>
-              ))}
-            </div>
-
-            {/* Phone */}
-            <p className="text-gray-500">
-              {personalInfo.phone}
-            </p>
+          {/* Social Links */}
+          <div className="flex justify-center gap-3 mb-6">
+            {[
+              { url: personalInfo.linkedin, icon: 'linkedin', label: 'LinkedIn' },
+              { url: personalInfo.github, icon: 'github', label: 'GitHub' },
+              { url: personalInfo.twitter, icon: 'twitter', label: 'X' },
+            ].map((social) => (
+              <motion.a
+                key={social.icon}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-400 hover:text-gray-900 hover:border-gray-400 hover:shadow-md transition-all duration-300"
+                aria-label={social.label}
+              >
+                <SocialIcon icon={social.icon} />
+              </motion.a>
+            ))}
           </div>
+
+          <p className="text-gray-400 text-sm font-mono">{personalInfo.phone}</p>
         </motion.div>
       </div>
 
       {/* Footer */}
-      <footer className="mt-20 pt-8 border-t border-gray-200">
+      <footer className="mt-20 pt-8 border-t border-gray-200/60">
         <div className="container mx-auto px-4 md:px-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} {personalInfo.name}. Built with Next.js.
+          <p className="text-gray-300 text-xs font-mono tracking-wider">
+            &copy; {new Date().getFullYear()} {personalInfo.name} &middot; Built with Next.js
           </p>
         </div>
       </footer>
@@ -87,7 +81,7 @@ export default function Contact() {
 }
 
 function SocialIcon({ icon }: { icon: string }) {
-  const iconClass = 'w-6 h-6'
+  const iconClass = 'w-5 h-5'
 
   switch (icon) {
     case 'linkedin':

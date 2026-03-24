@@ -10,7 +10,8 @@ export default function PNCPrism() {
     <CaseStudyLayout
       title="PNC Prism: AI-Powered PM Productivity Platform"
       subtitle="CMU Tepper · Academic Project for PNC"
-      heroImage="/images/case-studies/pnc-prism-hero.png"
+      heroImage="/images/case-studies/pnc-.png"
+      logo="/images/case-studies/pnc-.png"
       role="Product Lead & Strategy"
       team="4-member cross-functional team"
       timeline="November 2025"
