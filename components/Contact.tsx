@@ -20,7 +20,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-            I'm looking for PM internships at AI-first startups (Summer 2026). If you're building
+            I'm looking for full-time PM roles (Summer 2027). If you're building
             the future of AI and want someone who ships fast — let's talk.
           </p>
 
