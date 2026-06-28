@@ -22,7 +22,7 @@ export default function Experience() {
             Experience
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            4+ years driving AI-powered product strategy at EY
+            5 years driving AI-powered product strategy at EY
           </p>
         </motion.div>
 

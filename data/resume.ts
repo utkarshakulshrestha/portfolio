@@ -2,20 +2,20 @@ export const personalInfo = {
   name: "Utkarsha Kulshrestha",
   initials: "UK",
   title: "MBA Candidate @ CMU Tepper",
-  tagline: "4 years of shipping AI products at EY",
+  tagline: "5 years of shipping AI products at EY",
   email: "ukulshre@tepper.cmu.edu",
   phone: "412.579.1892",
   linkedin: "https://www.linkedin.com/in/utkarshak/",
   github: "https://github.com/utkarshakulshrestha",
   twitter: "https://x.com/utkarshakulshr1",
-  summary: "Seeking PM internships at AI-first startups. 4+ years of product experience at EY — owned roadmaps, ran user research, and led a 15-member squad building an automation platform for 1,200+ users. Now pursuing my MBA at CMU Tepper, focused on AI and product strategy.",
-  seeking: "PM internships (Summer 2026)",
+  summary: "MBA candidate at CMU Tepper, currently interning at Airbnb as a Sourcing Operations & Innovation Intern, working on AI-enabled sourcing workflows. 5 years of product experience at EY, where I owned roadmaps, ran user research, and led a 15-member squad in building an automation platform for over 1,200 users. Focused on AI and product strategy. Open to full-time PM roles starting Summer 2027.",
+  seeking: "Full-time PM roles (Summer 2027)",
 }
 
 export const topImpacts = [
   { metric: "CMU Tepper", label: "MBA 2027" },
   { metric: "1,200+", label: "Platform Users" },
-  { metric: "4+ yrs", label: "Product Experience" },
+  { metric: "5 yrs", label: "Product Experience" },
 ]
 
 export const skills = [
@@ -30,6 +30,37 @@ export const skills = [
 ]
 
 export const experience = [
+  {
+    id: 0,
+    title: "Sourcing Operations & Innovation Intern",
+    designation: "Intern",
+    company: "Airbnb",
+    location: "San Francisco, CA",
+    duration: "Jun 2026 – Aug 2026",
+    highlights: [
+      {
+        text: "Designing and prototyping an AI-enabled sourcing operating model to improve how sourcing decisions are structured, analyzed, and executed across the Global Sourcing team",
+        metrics: [],
+      },
+      {
+        text: "Mapping end-to-end sourcing workflows and identifying where AI augmentation can improve speed, quality, and consistency across categories",
+        metrics: [],
+      },
+      {
+        text: "Prototyping AI-enabled workflows including deal summary generation, proposal comparison, contract insight extraction, and negotiation preparation",
+        metrics: [],
+      },
+      {
+        text: "Structuring sourcing knowledge, documentation, and templates to enable scalable AI usage across enterprise technology, operations, and strategic services categories",
+        metrics: [],
+      },
+      {
+        text: "Developing metrics to measure AI impact on sourcing efficiency, cycle time, and decision clarity",
+        metrics: [],
+      },
+    ],
+    impactHighlights: ["AI-Enabled Sourcing", "Global Procurement"],
+  },
   {
     id: 1,
     title: "Product Lead – AI Automation Platform",
